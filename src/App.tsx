@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import './App.css'
 import { CounterMultiply } from './components/CounterMultiply';
@@ -33,6 +34,14 @@ function App() {
   {auth && <Logout></Logout>}
   {!auth && <Login></Login>}
   </div>
+=======
+import './App.css'
+function App() {
+  
+
+  return <div ></div>
+  
+>>>>>>> f46a5016675adfa7250702c928954b44bbe56436
 
 }
 export default App;
