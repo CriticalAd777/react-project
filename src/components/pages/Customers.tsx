@@ -1,0 +1,1 @@
+export const Costomers:React.FC = () => <h1>Costumers</h1>
