@@ -1,1 +1,1 @@
-export const Costomers:React.FC = () => <h1>Costumers</h1>
+export const Customers: React.FC = () => <h1>Customers</h1>
