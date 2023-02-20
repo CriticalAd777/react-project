@@ -1,4 +1,4 @@
-export function  getRandomNumber(min: number, max: number,
+export function getRandomNumber(min: number, max: number,
      isMinInclusive: boolean = true, isMaxInclusive: boolean = false) {
         if (!isMinInclusive) {
             min++;
