@@ -1,16 +1,20 @@
 import { Employee } from "../model/Employee";
-
+import employeeConfig from "../config/employee-config.json";
+import { getRandomNumber } from "../utils/random";
 export class Company {
-   private employees: Employee[] = [];
+    private employees: Employee[] = [];
     addEmployee(empl: Employee): void {
+        empl.id = getRandomNumber(employeeConfig.minId, employeeConfig.maxId);
         this.employees.push(empl);
     }
     updateEmployee(empl: Employee): void {
-        const emplUpdated = this.getEmployee(empl.id);
-        if (emplUpdated != null) {
-            emplUpdated.department = empl.department;
-            emplUpdated.salary = empl.salary;
+        const index = this.employees.findIndex(e => e.id == empl.id);
+        
+        if (index >= 0 ) {
+           
+           this.employees[index] = empl;
         }
+        
     }
     getEmployee(id: number): Employee | null {
         const index: number = this.employees.findIndex(e => e.id === id);
